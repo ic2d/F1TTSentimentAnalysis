@@ -1,0 +1,14 @@
+.env
+.idea
+.ipynb_checkpoints
+
+__pycache__/
+*.py[cod]
+*$py.class
+*googleusercontent.com.json
+settings.yaml
+*.pkl
+models
+predictions
+data/
+Google*

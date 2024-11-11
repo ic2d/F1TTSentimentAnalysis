@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  jupyter:
+    #cpuset: "0-6" # only enable if multicore
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: "${USER_ID}:${GROUP_ID}"
+    mem_limit: 9g
+    memswap_limit: 200g
+    environment:
+      - NB_UID=${USER_ID}
+      - NB_GID=${GROUP_ID}
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan/work
